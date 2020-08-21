@@ -4,6 +4,23 @@
 
 toc
 
+## 9.3.0
+
+### Printable wrappers
+
+Sometimes an objects `toString()` aren't want is desired for the give situation. 
+Printable wrappers gives you a way to control this.
+
+### Wrap a individual object
+
+```java
+Integer i = Printable.wrap(1, n -> "#"+n);
+```
+### Wrap an array of objects
+
+### Create a wrapped array 
+
+### Named objects 
 
 ## 6.0.1
 ### Prepare for Android
