@@ -32,9 +32,13 @@ public class PrintableTest {
         assertEquals("(3,2)", i.toString());
     }
     public static class Person{
-        private  String name;
-        private  int age;
+        private final String name;
+        private final int age;
 
+        public Person(){
+            name = "";
+            age = 1;
+        }
         public Person(String name, int age){
 
             this.name = name;
@@ -50,6 +54,15 @@ public class PrintableTest {
             return age;
         }
     }
+    @Test
+    void testObjectExtensionOfPersonFinalFields() {
+        Person original = new Person("Five", 10);
+        Function1<Person, String> toString = n -> String.format("%s (age:%s) ", n.getName(), n.getAge());
+        Person wrapper = Printable.wrap(original, toString);
+        assertEquals(toString.call(original), wrapper.toString());
+
+    }
+
     @Test
     void testObjectExtentionOfObjectWithPrivateFields() {
         List<Integer> orinigal = new ArrayList();
