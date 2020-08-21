@@ -12,6 +12,12 @@ To change this file edit the source file and then run MarkdownSnippets.
 <!-- toc -->
 ## Contents
 
+  * [9.3.0](#930)
+    * [Printable wrappers](#printable-wrappers)
+    * [Wrap a individual object](#wrap-a-individual-object)
+    * [Wrap an array of objects](#wrap-an-array-of-objects)
+    * [Create a wrapped array](#create-a-wrapped-array)
+    * [Named objects](#named-objects)
   * [6.0.1](#601)
     * [Prepare for Android](#prepare-for-android)
   * [Previous versions](#previous-versions)
@@ -26,6 +32,24 @@ To change this file edit the source file and then run MarkdownSnippets.
     * [Method 2 - use Runner](#method-2---use-runner)
     * [Results](#results)
     * [Usage](#usage)<!-- endToc -->
+
+## 9.3.0
+
+### Printable wrappers
+
+Sometimes an objects `toString()` aren't want is desired for the give situation. 
+Printable wrappers gives you a way to control this.
+
+### Wrap a individual object
+
+```java
+Integer i = Printable.wrap(1, n -> "#"+n);
+```
+### Wrap an array of objects
+
+### Create a wrapped array 
+
+### Named objects 
 
 ## 6.0.1
 ### Prepare for Android
@@ -76,7 +100,7 @@ Package Level Settings allows for programmatic setting of configuration at the p
 This is a prompt that includes helper text and quick actions for use with [Arlo's Commit Notation](https://github.com/RefactoringCombos/ArlosCommitNotation).
 It is currently the default option for TCR and will produce a window that looks like:
 
-![prompt](/approvaltests/src/test/java/machine_specific_tests/approvaltests/testcommitrevert/ArlosGitNotationPromptTest.test.Mac_OS_X.approved.png)
+![prompt](/approvaltests-tests/src/test/java/org/approvaltests/machine_specific_tests/testcommitrevert/ArlosGitNotationPromptTest.test.Mac_OS_X.approved.png)
 
 
 
